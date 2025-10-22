@@ -114,6 +114,11 @@ footer a {
   text-decoration: none;
 }
 
+.navbar-container li a {
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 760px) {
   body {
     font-size: 70%;
