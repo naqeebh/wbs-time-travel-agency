@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgb(43, 172, 232);
+  height: 6vw;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 2rem;
+  align-items: start;
+}
+
+.logo {
+  max-height: 100%;
+}
+
+.navbar {
+  width: 90%;
+  height: 6vw;
+}
+
+.navbar-container {
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-container li {
+  list-style: none;
+  color: white;
+  padding: 1rem;
+}
+
+.navbar-container li:last-child {
+  margin-left: auto;
+}
+
+.gallery {
+  padding: 2rem;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  align-self: center;
+}
+
+.gallery-item {
+  width: 100%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about,
+.description,
+.services {
+  min-width: 100px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+p {
+  padding: 10px;
+}
+
+h1 {
+  padding: 20px;
+}
+
+.about-item,
+.description-item,
+.service-item {
+  border: 2px solid rgb(43, 172, 232);
+  /* text-align: center; */
+}
+
+footer {
+  background-color: rgb(43, 172, 232);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  gap: 5px;
+  padding: 10px;
+  margin-top: auto;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 70%;
+  }
+  .about,
+  .description,
+  .services {
+    flex-wrap: wrap;
+  }
+  header {
+    height: 10vw;
+  }
+
+  .navbar {
+    width: 95%;
+    height: 10vw;
+  }
+
+  .navbar-container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
+  .navbar-container li:last-child {
+    margin-right: 1rem;
+  }
+
+  .navbar-container li {
+    padding: 0.5rem;
+  }
+}
